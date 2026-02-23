@@ -233,7 +233,7 @@ export const baseConfig = (options = {}) => {
         // Archivos JSON: linting estructural sin type-awareness
         {
             files: ["**/*.json"],
-            ignores: ["package-lock.json", "**/tsconfig*.json"],
+            ignores: ["package-lock.json", "**/tsconfig*.json", ".vscode/**"],
             language: "json/json",
             ...json.configs.recommended,
         },
@@ -248,6 +248,7 @@ export const baseConfig = (options = {}) => {
                 "commitlint.config.{js,mjs,cjs}",
                 "vite.config.{js,mjs,ts,mts}",
                 "vitest.config.{js,mjs,ts,mts}",
+                ".storybook/**/*.{ts,tsx,js,jsx}",
             ],
             languageOptions: {
                 parserOptions: {

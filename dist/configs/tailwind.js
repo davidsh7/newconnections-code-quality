@@ -2,6 +2,7 @@ import tailwindcss from "eslint-plugin-better-tailwindcss";
 export const tailwindConfig = (options = {}) => {
     const { entryPoint = "./src/styles/index.css" } = options;
     return {
+        files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
         plugins: {
             "better-tailwindcss": tailwindcss,
         },

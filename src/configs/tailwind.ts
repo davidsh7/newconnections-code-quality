@@ -12,6 +12,7 @@ export const tailwindConfig = (
   const { entryPoint = "./src/styles/index.css" } = options;
 
   return {
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     plugins: {
       "better-tailwindcss": tailwindcss,
     },

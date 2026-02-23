@@ -16,8 +16,13 @@ export const reactConfig = (
 
   const configs: Linter.Config[] = [];
 
+  const JS_TS_FILES = ["**/*.{js,jsx,mjs,cjs,ts,tsx}"];
+
   if (a11y) {
-    configs.push(jsxA11yPlugin.flatConfigs.recommended);
+    configs.push({
+      ...jsxA11yPlugin.flatConfigs.recommended,
+      files: JS_TS_FILES,
+    });
   }
 
   const reactHooksPlugins: Linter.Config["plugins"] = {
@@ -27,9 +32,16 @@ export const reactConfig = (
   };
 
   configs.push(
-    reactPlugin.configs.flat.recommended as Linter.Config,
-    reactRefreshPlugin.configs.vite as Linter.Config,
     {
+      ...(reactPlugin.configs.flat.recommended as Linter.Config),
+      files: JS_TS_FILES,
+    },
+    {
+      ...(reactRefreshPlugin.configs.vite as Linter.Config),
+      files: JS_TS_FILES,
+    },
+    {
+      files: JS_TS_FILES,
       plugins: reactHooksPlugins,
       rules: {
         "react-hooks/exhaustive-deps": "warn",

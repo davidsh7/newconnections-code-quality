@@ -5,13 +5,24 @@ import reactRefreshPlugin from "eslint-plugin-react-refresh";
 export const reactConfig = (options = {}) => {
     const { a11y = true, isLibrary = false } = options;
     const configs = [];
+    const JS_TS_FILES = ["**/*.{js,jsx,mjs,cjs,ts,tsx}"];
     if (a11y) {
-        configs.push(jsxA11yPlugin.flatConfigs.recommended);
+        configs.push({
+            ...jsxA11yPlugin.flatConfigs.recommended,
+            files: JS_TS_FILES,
+        });
     }
     const reactHooksPlugins = {
         "react-hooks": reactHooksPlugin,
     };
-    configs.push(reactPlugin.configs.flat.recommended, reactRefreshPlugin.configs.vite, {
+    configs.push({
+        ...reactPlugin.configs.flat.recommended,
+        files: JS_TS_FILES,
+    }, {
+        ...reactRefreshPlugin.configs.vite,
+        files: JS_TS_FILES,
+    }, {
+        files: JS_TS_FILES,
         plugins: reactHooksPlugins,
         rules: {
             "react-hooks/exhaustive-deps": "warn",
