@@ -1,0 +1,1 @@
+{"version":3,"file":"compat.d.ts","sourceRoot":"","sources":["../../src/configs/compat.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,MAAM,EAAE,MAAM,QAAQ,CAAC;AAGrC,MAAM,WAAW,mBAAmB;IAClC,0EAA0E;IAC1E,KAAK,CAAC,EAAE,MAAM,EAAE,CAAC;IACjB,uEAAuE;IACvE,SAAS,CAAC,EAAE,MAAM,EAAE,CAAC;CACtB;AAED,eAAO,MAAM,YAAY,GACvB,UAAS,mBAAwB,KAChC,MAAM,CAAC,MAiBT,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"library.d.ts","sourceRoot":"","sources":["../../src/presets/library.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,MAAM,EAAE,MAAM,QAAQ,CAAC;AAErC,OAAO,EAAc,KAAK,iBAAiB,EAAE,MAAM,oBAAoB,CAAC;AAMxE,MAAM,MAAM,oBAAoB,GAAG,iBAAiB,CAAC;AAErD;;;GAGG;AACH,eAAO,MAAM,OAAO,GAClB,UAAS,oBAAyB,KACjC,MAAM,CAAC,MAAM,EAMf,CAAC"}

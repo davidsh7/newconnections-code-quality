@@ -1,0 +1,149 @@
+{
+  "name": "@newconnections/code-quality",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Configuración centralizada de calidad de código para proyectos NewConnections",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./configs/base": {
+      "import": "./dist/configs/base.js",
+      "types": "./dist/configs/base.d.ts"
+    },
+    "./configs/react": {
+      "import": "./dist/configs/react.js",
+      "types": "./dist/configs/react.d.ts"
+    },
+    "./configs/testing": {
+      "import": "./dist/configs/testing.js",
+      "types": "./dist/configs/testing.d.ts"
+    },
+    "./configs/testing-react": {
+      "import": "./dist/configs/testingReact.js",
+      "types": "./dist/configs/testingReact.d.ts"
+    },
+    "./configs/tailwind": {
+      "import": "./dist/configs/tailwind.js",
+      "types": "./dist/configs/tailwind.d.ts"
+    },
+    "./configs/storybook": {
+      "import": "./dist/configs/storybook.js",
+      "types": "./dist/configs/storybook.d.ts"
+    },
+    "./configs/compat": {
+      "import": "./dist/configs/compat.js",
+      "types": "./dist/configs/compat.d.ts"
+    },
+    "./configs/ignores": {
+      "import": "./dist/configs/ignores.js",
+      "types": "./dist/configs/ignores.d.ts"
+    },
+    "./presets/application": {
+      "import": "./dist/presets/application.js",
+      "types": "./dist/presets/application.d.ts"
+    },
+    "./presets/library": {
+      "import": "./dist/presets/library.js",
+      "types": "./dist/presets/library.d.ts"
+    },
+    "./presets/microfrontend": {
+      "import": "./dist/presets/microfrontend.js",
+      "types": "./dist/presets/microfrontend.d.ts"
+    },
+    "./presets/design-system": {
+      "import": "./dist/presets/designSystem.js",
+      "types": "./dist/presets/designSystem.d.ts"
+    },
+    "./rules/no-direct-env-assignment": {
+      "import": "./dist/rules/noDirectEnvAssignment.js"
+    },
+    "./rules/no-empty-mocks": {
+      "import": "./dist/rules/noEmptyMocks.js"
+    },
+    "./rules/no-unsupported-polyfills": {
+      "import": "./dist/rules/noUnsupportedPolyfills.js"
+    },
+    "./prettier": {
+      "import": "./dist/prettier/base.js"
+    },
+    "./prettier/tailwind": {
+      "import": "./dist/prettier/tailwind.js"
+    },
+    "./typescript/base.json": "./typescript/base.json",
+    "./typescript/application.json": "./typescript/application.json",
+    "./typescript/library.json": "./typescript/library.json",
+    "./typescript/paths.json": "./typescript/paths.json",
+    "./commitlint": {
+      "import": "./dist/commitlint/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.dist.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint 'src/**/*.{ts,tsx,js,jsx,cjs,mjs}' 'test/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx,js,jsx,cjs,mjs}' 'test/**/*.{ts,tsx}' --fix",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "peerDependencies": {
+    "eslint": "^9.30.0",
+    "prettier": "^3.6.0",
+    "typescript": "^5.8.0"
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^20.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/eslint-plugin": "^1.6.0",
+    "eslint-config-love": "^150.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-better-tailwindcss": "^4.3.0",
+    "eslint-plugin-compat": "^6.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.15.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-n": "^17.21.0",
+    "eslint-plugin-perfectionist": "^5.5.0",
+    "eslint-plugin-prettier": "^5.5.0",
+    "eslint-plugin-promise": "^7.2.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-react-refresh": "^0.5.0",
+    "eslint-plugin-security": "^3.0.0",
+    "eslint-plugin-sonarjs": "^3.0.0",
+    "eslint-plugin-storybook": "^10.2.0",
+    "eslint-plugin-testing-library": "^7.15.0",
+    "eslint-plugin-unicorn": "^63.0.0",
+    "eslint-plugin-unused-imports": "^4.4.0",
+    "globals": "^17.3.0",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "rimraf": "^6.0.1",
+    "typescript": "5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

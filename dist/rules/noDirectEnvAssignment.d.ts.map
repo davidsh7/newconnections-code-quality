@@ -1,0 +1,1 @@
+{"version":3,"file":"noDirectEnvAssignment.d.ts","sourceRoot":"","sources":["../../src/rules/noDirectEnvAssignment.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,IAAI,EAAE,MAAM,QAAQ,CAAC;AAEnC;;;;;;;;;;;GAWG;AACH,eAAO,MAAM,2BAA2B,GACtC,QAAQ,MAAM,KACb,IAAI,CAAC,UA0BN,CAAC;AAEH;;GAEG;AACH,eAAO,MAAM,mBAAmB,iBAA6C,CAAC;AAE9E;;GAEG;AACH,eAAO,MAAM,yBAAyB,iBACY,CAAC"}

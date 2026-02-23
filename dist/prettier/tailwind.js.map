@@ -1,0 +1,1 @@
+{"version":3,"file":"tailwind.js","sourceRoot":"","sources":["../../src/prettier/tailwind.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,WAAW,CAAC;AAEzC;;;;;;;GAOG;AACH,MAAM,CAAC,MAAM,gBAAgB,GAAG;IAC9B,GAAG,YAAY;IACf,OAAO,EAAE,CAAC,6BAA6B,CAAC;IACxC,iBAAiB,EAAE,CAAC,MAAM,EAAE,IAAI,EAAE,KAAK,EAAE,YAAY,CAAC;CAC9C,CAAC"}

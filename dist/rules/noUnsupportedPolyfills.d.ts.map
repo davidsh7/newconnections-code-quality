@@ -1,0 +1,1 @@
+{"version":3,"file":"noUnsupportedPolyfills.d.ts","sourceRoot":"","sources":["../../src/rules/noUnsupportedPolyfills.ts"],"names":[],"mappings":"AAGA,OAAO,KAAK,EAAE,IAAI,EAAE,MAAM,QAAQ,CAAC;AA6SnC,QAAA,MAAM,sBAAsB,EAAE,IAAI,CAAC,UAiDlC,CAAC;AAEF,eAAe,sBAAsB,CAAC"}
