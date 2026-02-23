@@ -122,7 +122,7 @@ export default prettierTailwind
 ### Commitlint (commitlint.config.mjs)
 
 ```javascript
-import { commitlintConfig } from "@newconnections/code-quality/commitlint";
+import commitlintConfig from "@newconnections/code-quality/commitlint";
 export default commitlintConfig;
 ```
 

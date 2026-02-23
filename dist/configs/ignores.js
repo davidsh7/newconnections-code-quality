@@ -9,6 +9,7 @@ export const ignoresConfig = () => ({
         "eslint-rules/**",
         // Module Federation genera esta carpeta en runtime con import maps temporales
         ".__mf__temp/**",
+        "scripts/**", // Scripts personalizados que no siguen las reglas de linting (ej: scripts de generación de código)
     ],
 });
 //# sourceMappingURL=ignores.js.map
