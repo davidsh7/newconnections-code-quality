@@ -11,9 +11,7 @@ import type { Rule } from "eslint";
  *
  * @param fnName - Nombre de la función a detectar (ej. 'getShellEnv')
  */
-export declare const createNoDirectEnvAssignment: (
-  fnName: string,
-) => Rule.RuleModule;
+export declare const createNoDirectEnvAssignment: (fnName: string) => Rule.RuleModule;
 /**
  * Instancia preconfigurada para getShellEnv (Shell).
  */

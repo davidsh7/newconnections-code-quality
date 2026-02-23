@@ -9,13 +9,13 @@
  *   export default commitlintConfig
  */
 declare const commitlintConfig: {
-  extends: string[];
-  rules: {
-    "body-max-line-length": (string | number)[];
-    "header-max-length": (string | number)[];
-    "subject-case": number[];
-    "type-enum": (string | number | string[])[];
-  };
+    extends: string[];
+    rules: {
+        "body-max-line-length": (string | number)[];
+        "header-max-length": (string | number)[];
+        "subject-case": number[];
+        "type-enum": (string | number | string[])[];
+    };
 };
 export default commitlintConfig;
 //# sourceMappingURL=index.d.ts.map
