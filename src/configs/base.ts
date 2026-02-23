@@ -1,3 +1,4 @@
+import json from "@eslint/json";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import type { Linter } from "eslint";
@@ -23,7 +24,10 @@ export const baseConfig = (
   return [
     eslintPluginPrettierRecommended,
     promisePlugin.configs["flat/recommended"],
-    perfectionistConfigs["recommended-natural"],
+    {
+      ...perfectionistConfigs["recommended-natural"],
+      files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+    },
     {
       ...(love as Linter.Config),
       files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
@@ -234,6 +238,13 @@ export const baseConfig = (
         },
         react: { version: "detect" },
       },
+    },
+    // Archivos JSON: linting estructural sin type-awareness
+    {
+      files: ["**/*.json"],
+      ignores: ["package-lock.json", "**/tsconfig*.json"],
+      language: "json/json",
+      ...json.configs.recommended,
     },
     // Archivos de configuración del proyecto: lintear sin type-awareness.
     // project: false solo desactiva el parser — las reglas type-aware siguen activas

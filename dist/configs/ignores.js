@@ -7,6 +7,8 @@ export const ignoresConfig = () => ({
         "build/**",
         "node_modules/**",
         "eslint-rules/**",
+        // Module Federation genera esta carpeta en runtime con import maps temporales
+        ".__mf__temp/**",
     ],
 });
 //# sourceMappingURL=ignores.js.map
