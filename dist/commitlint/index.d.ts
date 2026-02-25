@@ -7,6 +7,9 @@
  * O en commitlint.config.mjs:
  *   import commitlintConfig from '@newconnections/code-quality/commitlint'
  *   export default commitlintConfig
+ *
+ * Nota: se resuelve la ruta absoluta de @commitlint/config-conventional desde
+ * este paquete para evitar que los consumidores lo instalen por separado.
  */
 declare const commitlintConfig: {
     extends: string[];

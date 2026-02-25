@@ -1,3 +1,5 @@
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
 /**
  * Configuración compartida de commitlint para todos los proyectos NewConnections.
  *
@@ -7,9 +9,12 @@
  * O en commitlint.config.mjs:
  *   import commitlintConfig from '@newconnections/code-quality/commitlint'
  *   export default commitlintConfig
+ *
+ * Nota: se resuelve la ruta absoluta de @commitlint/config-conventional desde
+ * este paquete para evitar que los consumidores lo instalen por separado.
  */
 const commitlintConfig = {
-    extends: ["@commitlint/config-conventional"],
+    extends: [require.resolve("@commitlint/config-conventional")],
     rules: {
         "body-max-line-length": [2, "always", 150],
         "header-max-length": [2, "always", 150],
