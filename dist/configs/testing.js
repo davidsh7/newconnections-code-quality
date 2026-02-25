@@ -14,10 +14,24 @@ export const testingConfig = () => ({
     },
     rules: {
         ...vitest.configs.recommended.rules,
+        // Reglas demasiado estrictas para archivos de test:
+        // vi.fn() retorna valores por diseño — strict-void-return genera falsos positivos masivos
+        "@typescript-eslint/strict-void-return": "off",
+        // unbound-method: los mocks de vitest extraen métodos de objetos intencionalmente
+        "@typescript-eslint/unbound-method": "off",
         "jest/no-disabled-tests": "warn",
         "jest/no-focused-tests": "error",
         "jest/no-identical-title": "error",
         "jest/valid-expect": "error",
+        // Los tests tienen describe > it > callback — la jerarquía natural supera el límite de 3
+        "max-nested-callbacks": "off",
+        // delete dinámico es necesario para cleanup de propiedades en window
+        "no-dynamic-delete": "off",
+        // Patrón común en tests: new Promise(resolve => setTimeout(resolve, ms))
+        "no-promise-executor-return": "off",
+        "promise/no-promise-executor-return": "off",
+        // Los archivos de test definen helpers/mocks como componentes adicionales
+        "react/no-multi-comp": "off",
         "vitest/expect-expect": [
             "error",
             { assertFunctionNames: ["expect", "*.run"] },

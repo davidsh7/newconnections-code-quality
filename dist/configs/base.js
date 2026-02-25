@@ -55,6 +55,7 @@ export const baseConfig = (options = {}) => {
                 "@typescript-eslint/consistent-type-imports": "warn",
                 "@typescript-eslint/explicit-function-return-type": "off",
                 "@typescript-eslint/init-declarations": "off",
+                "@typescript-eslint/max-params": ["error", { max: 6 }],
                 "@typescript-eslint/naming-convention": [
                     "warn",
                     {
@@ -101,6 +102,10 @@ export const baseConfig = (options = {}) => {
                 "@typescript-eslint/no-unsafe-return": "off",
                 "@typescript-eslint/no-unsafe-type-assertion": "off",
                 "@typescript-eslint/no-wrapper-object-types": "error",
+                "@typescript-eslint/only-throw-error": [
+                    "error",
+                    { allowThrowingUnknown: true },
+                ],
                 "@typescript-eslint/prefer-as-const": "warn",
                 "@typescript-eslint/prefer-destructuring": [
                     "error",
@@ -108,12 +113,14 @@ export const baseConfig = (options = {}) => {
                 ],
                 "@typescript-eslint/prefer-nullish-coalescing": "error",
                 "@typescript-eslint/prefer-optional-chain": "error",
+                "@typescript-eslint/promise-function-async": "off",
                 "@typescript-eslint/return-await": "off",
                 "@typescript-eslint/space-before-function-paren": "off",
                 "@typescript-eslint/strict-boolean-expressions": "error",
                 "@typescript-eslint/triple-slash-reference": "off",
                 // Style
                 "arrow-body-style": "off",
+                complexity: ["error", 15],
                 curly: ["warn", "all"],
                 // Quality gates (LOCKED)
                 eqeqeq: ["error", "always", { null: "ignore" }],
@@ -149,6 +156,7 @@ export const baseConfig = (options = {}) => {
                 ],
                 "multiline-ternary": "off",
                 "no-alert": "error",
+                "no-await-in-loop": "off",
                 "no-console": "error",
                 "no-debugger": "error",
                 "no-dupe-keys": "error",
@@ -160,6 +168,7 @@ export const baseConfig = (options = {}) => {
                         props: true,
                     },
                 ],
+                "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
                 "no-unused-private-class-members": "error",
                 "no-unused-vars": "off",
                 "no-void": ["error", { allowAsStatement: true }],
@@ -181,12 +190,13 @@ export const baseConfig = (options = {}) => {
                 ],
                 // Perfectionist
                 "perfectionist/sort-jsx-props": "off",
+                "promise/avoid-new": "off",
+                "require-atomic-updates": "off",
                 // Security
                 "security/detect-non-literal-regexp": "off",
                 "security/detect-object-injection": "off",
                 // SonarJS
                 "sonarjs/function-return-type": "off",
-                "sonarjs/todo-tag": "warn",
                 // Unicorn
                 "unicorn/consistent-function-scoping": "error",
                 "unicorn/explicit-length-check": "error",
