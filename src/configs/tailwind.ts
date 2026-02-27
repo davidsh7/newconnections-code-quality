@@ -24,8 +24,6 @@ export const tailwindConfig = (
       "better-tailwindcss/enforce-consistent-class-order": "off",
       "better-tailwindcss/enforce-consistent-line-wrapping": "off",
       "better-tailwindcss/no-conflicting-classes": "error",
-      // dark es una clase válida usada en Storybook para activar dark mode en wrappers
-      "better-tailwindcss/no-unknown-classes": ["warn", { ignore: ["^dark$"] }],
     },
     settings: {
       "better-tailwindcss": {

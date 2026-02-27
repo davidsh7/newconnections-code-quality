@@ -51,7 +51,7 @@ export const reactConfig = (
           "warn",
           { namedComponents: "arrow-function" },
         ],
-        "react/jsx-no-bind": "error",
+        "react/jsx-no-bind": "off",
         "react/jsx-no-leaked-render": [
           "error",
           { validStrategies: ["ternary"] },
