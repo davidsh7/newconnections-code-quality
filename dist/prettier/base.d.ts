@@ -9,7 +9,7 @@
 export declare const prettierBase: {
     readonly arrowParens: "always";
     readonly endOfLine: "lf";
-    readonly jsxSingleQuote: true;
+    readonly jsxSingleQuote: false;
     readonly printWidth: 120;
     readonly semi: false;
     readonly singleQuote: true;

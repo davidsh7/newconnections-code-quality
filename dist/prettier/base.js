@@ -9,7 +9,7 @@
 export const prettierBase = {
     arrowParens: "always",
     endOfLine: "lf",
-    jsxSingleQuote: true,
+    jsxSingleQuote: false,
     printWidth: 120,
     semi: false,
     singleQuote: true,

@@ -18,6 +18,16 @@ export const designSystem = (options = {}) => {
         ...storybookConfig(),
         testingConfig(),
         testingReactConfig(),
+        // Override para compatibilidad con shadcn/ui
+        {
+            files: ["**/*.{js,jsx,ts,tsx}"],
+            rules: {
+                "@typescript-eslint/no-shadow": "off",
+                // shadcn/ui usa patrón de componentes compuestos (Dialog, DialogContent, etc.)
+                // Todos en el mismo archivo - es un patrón arquitectónico válido de Radix UI
+                "react/no-multi-comp": "off",
+            },
+        },
         ignoresConfig(),
     ];
 };
