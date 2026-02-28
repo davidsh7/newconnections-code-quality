@@ -17,13 +17,14 @@ export const tailwindConfig = (
       "better-tailwindcss": tailwindcss,
     },
     rules: {
-      ...tailwindcss.configs["recommended-warn"].rules,
+      ...tailwindcss.configs.recommended.rules,
       // Desactivadas por conflicto circular con prettier-plugin-tailwindcss:
       // enforce-consistent-class-order y enforce-consistent-line-wrapping quieren formatear clases
       // de forma distinta a prettier, generando un loop infinito en --fix
       "better-tailwindcss/enforce-consistent-class-order": "off",
       "better-tailwindcss/enforce-consistent-line-wrapping": "off",
       "better-tailwindcss/no-conflicting-classes": "error",
+      "better-tailwindcss/no-unknown-classes": "error",
     },
     settings: {
       "better-tailwindcss": {
